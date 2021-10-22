@@ -11,6 +11,17 @@ namespace Tienda
         static void Main(string[] args)
         {
             string s1,continuar;
+            String[,] m_productos;
+            m_productos = new string[9, 2]; //filas,columnas
+            m_productos[0, 0] = "vegetales"; m_productos[0, 1] = "5000";
+            m_productos[1, 0] = "carne"; m_productos[1, 1] = "10000";
+            m_productos[2, 0] = "huevos x12"; m_productos[2, 1] = "4000";
+            m_productos[3, 0] = "frutas"; m_productos[3, 1] = "6500";
+            m_productos[4, 0] = "gaseosa"; m_productos[4, 1] = "2500";
+            m_productos[5, 0] = "queso"; m_productos[5, 1] = "5500";
+            m_productos[6, 0] = "pollo"; m_productos[6, 1] = "9000";
+            m_productos[7, 0] = "cerveza"; m_productos[7, 1] = "3500";
+            m_productos[8, 0] = "leche"; m_productos[8, 1] = "2500";
 
             do {
                 menu();
@@ -21,7 +32,7 @@ namespace Tienda
 
                 switch (s1) {
                     case "1":
-                        buscar_producto();
+                        buscar_producto(m_productos);
                         break;
                     case "2":
                         suma_rapida_productos();
@@ -78,18 +89,23 @@ namespace Tienda
 
         //función para la primera opción del menú
         //busca producto por su nombre y muestra el precio
-        public static void buscar_producto()
+        public static void buscar_producto(string[,]m_entrada)
         {
-            Console.WriteLine("Productos \n" +
-                            "\nVegetales.- 5000$" +
-                            "\nCarne.- 10000$" +
-                            "\nHuevosx12.- 4000$" +
-                            "\nFrutas.- 6500$" +
-                            "\nGaseosa.- 2500$" +
-                            "\nQueso.- 5500$" +
-                            "\nPollo.- 9000$" +
-                            "\nCerveza.- 3500$" +
-                            "\nLeche.- 2500$\n");
+            string producto;
+
+            Console.WriteLine("\nDigite el producto que desea consultar");
+            producto = Console.ReadLine();
+
+            for (byte i = 0; i < 9; i++)
+            {
+                for (byte j = 0; j < 2; j++)
+                {
+                    if (producto == m_entrada[i, j]){
+                        Console.WriteLine("El precio del producto es " + m_entrada[i,j+1]);
+                    }
+                }
+            }
+
         }
 
         //función para la segunda opción del menú
