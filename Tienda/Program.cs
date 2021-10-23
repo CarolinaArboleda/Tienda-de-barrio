@@ -8,14 +8,14 @@ namespace Tienda
 {
     class Program
     {
-        public static double totalapagar;
-        public static string[,] clientes;
+        public static double totalapagar, devuelta, pago;
+        public static int id_cliente;
+        public static string nombre_cliente;
 
         static void Main(string[] args)
         {
             string s1, continuar;
-            String[,] m_productos;
-            m_productos = new string[9, 2]; //filas,columnas
+            string[,] m_productos = new string[9, 2]; //filas,columnas
             m_productos[0, 0] = "vegetales"; m_productos[0, 1] = "5000";
             m_productos[1, 0] = "carne"; m_productos[1, 1] = "10000";
             m_productos[2, 0] = "huevos x12"; m_productos[2, 1] = "4000";
@@ -25,6 +25,10 @@ namespace Tienda
             m_productos[6, 0] = "pollo"; m_productos[6, 1] = "9000";
             m_productos[7, 0] = "cerveza"; m_productos[7, 1] = "3500";
             m_productos[8, 0] = "leche"; m_productos[8, 1] = "2500";
+
+
+            string[,] m_clientes = new string[50, 3];
+            m_clientes[0, 0] = "id"; m_clientes[1, 0] = "Nombre del cliente"; m_clientes[2, 1] = "cantidad que debe";
 
             do
             {
@@ -43,10 +47,10 @@ namespace Tienda
                         suma_rapida_productos();
                         break;
                     case "3":
-                        pagar_cuenta();
+                        pagar_cuenta(m_clientes);
                         break;
                     case "4":
-                        consultar_cuenta();
+                        consultar_cuenta(m_clientes);
                         break;
                     case "5":
                         actualizar_cuenta();
@@ -151,10 +155,10 @@ namespace Tienda
 
         //función para la tercera opción del menú
         //totaliza y calcula la devuelta de la suma rápida de productos
-        public static void pagar_cuenta()
+        public static void pagar_cuenta(string[,] m_entrada)
         {
             string fiar;
-            double devuelta, pago;
+            bool once=true;
 
             Console.WriteLine("¿Desea fiar? si/no");
             fiar = Console.ReadLine();
@@ -162,9 +166,29 @@ namespace Tienda
             switch (fiar)
             {
                 case "si":
+                    id_cliente = new Random().Next(1000, 2000);
+                    Console.WriteLine("\nId cliente: " + id_cliente);
+                    Console.WriteLine("\nNombre del cliente: ");
+                    nombre_cliente=Console.ReadLine();
+
+                    for (byte i = 0; i < 50; i++)
+                    {
+                        for (byte j = 0; j < 3; j++)
+                        {
+                            if (m_entrada[i,0]==null && once)
+                            {
+                                m_entrada[i, 0] = id_cliente.ToString(); m_entrada[i, 1] = nombre_cliente; m_entrada[i, 2] = "-" + totalapagar.ToString();
+                                once = false;
+                            }
+                        }
+                    }
+
+                    Console.WriteLine("\nSe ha fiado exitosamente");
+
                     break;
                 case "no":
 
+                    Console.WriteLine("Id cliente: ");
                     Console.WriteLine("total pagado por el cliente: ");
                     pago = double.Parse(Console.ReadLine());
                     devuelta = pago - totalapagar;
@@ -179,9 +203,23 @@ namespace Tienda
 
         //función para la cuarta opción del menú
         //busca cliente por id e imprime saldo actual
-        public static void consultar_cuenta()
+        public static void consultar_cuenta(string[,] m_entrada)
         {
-            Console.WriteLine("Seleccione productos:");
+            string id_consultar;
+            Console.WriteLine("\nIngrese el id del cliente ");
+            id_consultar = Console.ReadLine();
+            Console.WriteLine(" ");
+
+            for (byte i = 0; i < 50; i++)
+            {
+                for (byte j = 0; j < 3; j++)
+                {
+                    if (m_entrada[i, 0] == id_consultar)
+                    {
+                        Console.Write(m_entrada[i, j] + "|");
+                    }
+                }
+            }
         }
 
         //función para la quinta opción del menú
