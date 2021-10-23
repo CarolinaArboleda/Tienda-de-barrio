@@ -186,13 +186,27 @@ namespace Tienda
                     Console.WriteLine("\nSe ha fiado exitosamente");
 
                     break;
+
                 case "no":
 
-                    Console.WriteLine("Id cliente: ");
-                    Console.WriteLine("total pagado por el cliente: ");
+                    id_cliente = new Random().Next(1000, 2000);
+                    Console.WriteLine("\nId cliente: " + id_cliente);
+                    Console.WriteLine("\ntotal pagado por el cliente: ");
                     pago = double.Parse(Console.ReadLine());
                     devuelta = pago - totalapagar;
                     Console.WriteLine("\nDevuelta: " + devuelta);
+
+                    for (byte i = 0; i < 50; i++)
+                    {
+                        for (byte j = 0; j < 3; j++)
+                        {
+                            if (m_entrada[i, 0] == null && once)
+                            {
+                                m_entrada[i, 0] = id_cliente.ToString(); m_entrada[i, 1] = nombre_cliente; m_entrada[i, 2] = "+" + devuelta.ToString();
+                                once = false;
+                            }
+                        }
+                    }
 
                     break;
                 default:
@@ -206,6 +220,7 @@ namespace Tienda
         public static void consultar_cuenta(string[,] m_entrada)
         {
             string id_consultar;
+
             Console.WriteLine("\nIngrese el id del cliente ");
             id_consultar = Console.ReadLine();
             Console.WriteLine(" ");
