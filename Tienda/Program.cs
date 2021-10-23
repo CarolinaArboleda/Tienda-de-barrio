@@ -8,9 +8,12 @@ namespace Tienda
 {
     class Program
     {
+        public static double totalapagar;
+        public static string[,] clientes;
+
         static void Main(string[] args)
         {
-            string s1,continuar;
+            string s1, continuar;
             String[,] m_productos;
             m_productos = new string[9, 2]; //filas,columnas
             m_productos[0, 0] = "vegetales"; m_productos[0, 1] = "5000";
@@ -23,14 +26,16 @@ namespace Tienda
             m_productos[7, 0] = "cerveza"; m_productos[7, 1] = "3500";
             m_productos[8, 0] = "leche"; m_productos[8, 1] = "2500";
 
-            do {
+            do
+            {
                 menu();
 
                 Console.WriteLine("digite su opción");
                 s1 = Console.ReadLine();
                 Console.WriteLine(" ");
 
-                switch (s1) {
+                switch (s1)
+                {
                     case "1":
                         buscar_producto(m_productos);
                         break;
@@ -67,8 +72,8 @@ namespace Tienda
                 continuar = Console.ReadLine();
                 Console.WriteLine(" ");
 
-            
-            } while (continuar=="s"||continuar=="S");
+
+            } while (continuar == "s" || continuar == "S");
 
         }
 
@@ -89,7 +94,7 @@ namespace Tienda
 
         //función para la primera opción del menú
         //busca producto por su nombre y muestra el precio
-        public static void buscar_producto(string[,]m_entrada)
+        public static void buscar_producto(string[,] m_entrada)
         {
             string producto;
 
@@ -100,8 +105,9 @@ namespace Tienda
             {
                 for (byte j = 0; j < 2; j++)
                 {
-                    if (producto == m_entrada[i, j]){
-                        Console.WriteLine("El precio del producto es " + m_entrada[i,j+1]);
+                    if (producto == m_entrada[i, j])
+                    {
+                        Console.WriteLine("El precio del producto es " + m_entrada[i, j + 1]);
                     }
                 }
             }
@@ -112,14 +118,63 @@ namespace Tienda
         //calcula la suma de los productos que el cliente está comprando
         public static void suma_rapida_productos()
         {
-            Console.WriteLine("Seleccione productos:");
+            int cantv, cantc, canth, cantf, cantz, cantq, cantp, cantb, canta;
+            const float preciov = 5000f, precioc = 10000f, precioh = 4000f, preciof = 6500f, precioz = 2500f, precioq = 5500f, preciop = 4000f, preciob = 3500f, precioa = 2500f;
+
+            Console.Write("Ingrese la cantidad que desea de vegetales: ");
+            cantv = Int32.Parse(Console.ReadLine());
+            Console.Write("Ingrese la cantidad que desea de carne: ");
+            cantc = Int32.Parse(Console.ReadLine());
+            Console.Write("Ingrese la cantidad que desea de huevos x12: ");
+            canth = Int32.Parse(Console.ReadLine());
+            Console.Write("Ingrese la cantidad que desea de fruta: ");
+            cantf = Int32.Parse(Console.ReadLine());
+            Console.Write("Ingrese la cantidad que desea de gaseosa: ");
+            cantz = Int32.Parse(Console.ReadLine());
+            Console.Write("Ingrese la cantidad que desea de queso: ");
+            cantq = Int32.Parse(Console.ReadLine());
+            Console.Write("Ingrese la cantidad que desea de pollo: ");
+            cantp = Int32.Parse(Console.ReadLine());
+            Console.Write("Ingrese la cantidad que desea de cerveza ");
+            cantb = Int32.Parse(Console.ReadLine());
+            Console.Write("Ingrese la cantidad que desea de leche");
+            canta = Int32.Parse(Console.ReadLine());
+
+
+
+            totalapagar = (cantv * preciov) + (cantc * precioc) + (canth * precioh) + (cantf * preciof) + (cantz * precioz) + (cantq * precioq) + (cantp * preciop) + (cantb * preciob) + (canta * precioa);
+
+            Console.WriteLine("El total a pagar es: " + totalapagar);
+
+
         }
 
         //función para la tercera opción del menú
         //totaliza y calcula la devuelta de la suma rápida de productos
         public static void pagar_cuenta()
         {
-            Console.WriteLine("Pagar cuenta/Aun pendiente");
+            string fiar;
+            double devuelta, pago;
+
+            Console.WriteLine("¿Desea fiar? si/no");
+            fiar = Console.ReadLine();
+
+            switch (fiar)
+            {
+                case "si":
+                    break;
+                case "no":
+
+                    Console.WriteLine("total pagado por el cliente: ");
+                    pago = double.Parse(Console.ReadLine());
+                    devuelta = pago - totalapagar;
+                    Console.WriteLine("\nDevuelta: " + devuelta);
+
+                    break;
+                default:
+                    Console.WriteLine("por favor ingrese una opción válida");
+                    break;
+            }
         }
 
         //función para la cuarta opción del menú
