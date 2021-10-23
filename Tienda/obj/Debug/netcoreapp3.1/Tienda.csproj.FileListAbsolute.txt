@@ -1,0 +1,14 @@
+C:\Users\hp\source\repos\Tienda\Tienda\bin\Debug\netcoreapp3.1\Tienda.exe
+C:\Users\hp\source\repos\Tienda\Tienda\bin\Debug\netcoreapp3.1\Tienda.deps.json
+C:\Users\hp\source\repos\Tienda\Tienda\bin\Debug\netcoreapp3.1\Tienda.runtimeconfig.json
+C:\Users\hp\source\repos\Tienda\Tienda\bin\Debug\netcoreapp3.1\Tienda.runtimeconfig.dev.json
+C:\Users\hp\source\repos\Tienda\Tienda\bin\Debug\netcoreapp3.1\Tienda.dll
+C:\Users\hp\source\repos\Tienda\Tienda\bin\Debug\netcoreapp3.1\Tienda.pdb
+C:\Users\hp\source\repos\Tienda\Tienda\obj\Debug\netcoreapp3.1\Tienda.csproj.AssemblyReference.cache
+C:\Users\hp\source\repos\Tienda\Tienda\obj\Debug\netcoreapp3.1\Tienda.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\source\repos\Tienda\Tienda\obj\Debug\netcoreapp3.1\Tienda.AssemblyInfoInputs.cache
+C:\Users\hp\source\repos\Tienda\Tienda\obj\Debug\netcoreapp3.1\Tienda.AssemblyInfo.cs
+C:\Users\hp\source\repos\Tienda\Tienda\obj\Debug\netcoreapp3.1\Tienda.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\Tienda\Tienda\obj\Debug\netcoreapp3.1\Tienda.dll
+C:\Users\hp\source\repos\Tienda\Tienda\obj\Debug\netcoreapp3.1\Tienda.pdb
+C:\Users\hp\source\repos\Tienda\Tienda\obj\Debug\netcoreapp3.1\Tienda.genruntimeconfig.cache

@@ -53,7 +53,7 @@ namespace Tienda
                         consultar_cuenta(m_clientes);
                         break;
                     case "5":
-                        actualizar_cuenta();
+                        actualizar_cuenta(m_clientes);
                         break;
                     case "6":
                         calcular_informe_ventas();
@@ -158,7 +158,7 @@ namespace Tienda
         public static void pagar_cuenta(string[,] m_entrada)
         {
             string fiar;
-            bool once=true;
+            bool once = true;
 
             Console.WriteLine("¿Desea fiar? si/no");
             fiar = Console.ReadLine();
@@ -169,13 +169,13 @@ namespace Tienda
                     id_cliente = new Random().Next(1000, 2000);
                     Console.WriteLine("\nId cliente: " + id_cliente);
                     Console.WriteLine("\nNombre del cliente: ");
-                    nombre_cliente=Console.ReadLine();
+                    nombre_cliente = Console.ReadLine();
 
                     for (byte i = 0; i < 50; i++)
                     {
                         for (byte j = 0; j < 3; j++)
                         {
-                            if (m_entrada[i,0]==null && once)
+                            if (m_entrada[i, 0] == null && once)
                             {
                                 m_entrada[i, 0] = id_cliente.ToString(); m_entrada[i, 1] = nombre_cliente; m_entrada[i, 2] = "-" + totalapagar.ToString();
                                 once = false;
@@ -239,9 +239,30 @@ namespace Tienda
 
         //función para la quinta opción del menú
         //actualiza el saldo de un cliente
-        public static void actualizar_cuenta()
+        public static void actualizar_cuenta(string[,] m_entrada)
+        
         {
-            Console.WriteLine("Que cliente desea actualizar:");
+            string codigo_id;
+            int nuevo_valor;
+
+            Console.WriteLine("Ingrese el id del cliente");
+             codigo_id = Console.ReadLine();
+
+            for (byte i = 0; i < 50; i++)
+{
+                for (byte j = 0; j < 3; j++)
+      {
+                    if (m_entrada[i, 0] == codigo_id)
+                    {
+                        Console.WriteLine("Ingrese el nuevo valor del cliente");
+                        nuevo_valor = int.Parse(Console.ReadLine());
+                        m_entrada[i, 2] = nuevo_valor.ToString();
+                    }
+                }
+            }
+
+
+
         }
 
         //función para la sexta opción del menú
