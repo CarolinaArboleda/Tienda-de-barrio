@@ -139,9 +139,9 @@ namespace Tienda
             cantq = Int32.Parse(Console.ReadLine());
             Console.Write("Ingrese la cantidad que desea de pollo: ");
             cantp = Int32.Parse(Console.ReadLine());
-            Console.Write("Ingrese la cantidad que desea de cerveza ");
+            Console.Write("Ingrese la cantidad que desea de cerveza: ");
             cantb = Int32.Parse(Console.ReadLine());
-            Console.Write("Ingrese la cantidad que desea de leche");
+            Console.Write("Ingrese la cantidad que desea de leche: ");
             canta = Int32.Parse(Console.ReadLine());
 
 
@@ -269,13 +269,20 @@ namespace Tienda
         //imprime los totales de las compras
         public static void calcular_informe_ventas()
         {
-            Console.WriteLine("Informe de ventas: Aun pendiente");
+            int compras_hechas;
+            int informe_ventas = 0;
+             
+            
+
+
+            Console.WriteLine(totalapagar);
         }
 
         //función para la séptima opción del menú
         //imprime el total de los saldos adeudados por clientes
         public static void calcular_cartera_clientes()
         {
+
             Console.WriteLine("Cartera clientes: 0");
         }
 
