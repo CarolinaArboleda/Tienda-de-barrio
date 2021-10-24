@@ -14,7 +14,7 @@ namespace Tienda
 
         static void Main(string[] args)
         {
-            string s1, continuar;
+            string s1, continuar="s";
             string[,] m_productos = new string[9, 2]; //filas,columnas
             m_productos[0, 0] = "vegetales"; m_productos[0, 1] = "5000";
             m_productos[1, 0] = "carne"; m_productos[1, 1] = "10000";
@@ -31,6 +31,8 @@ namespace Tienda
             m_clientes[0, 0] = "id"; m_clientes[1, 0] = "Nombre del cliente"; m_clientes[2, 1] = "cantidad que debe";
 
             string[,] m_pedido = new string[9, 2]; //almacena el pedido del cliente
+
+            bool running = true; //evalúa que el programa se esté ejecutando
 
             do
             {
@@ -68,18 +70,23 @@ namespace Tienda
                         break;
                     case "9":
                         salir();
+                        running = false;
                         break;
                     default:
                         Console.WriteLine("Seleccion no valida");
                         break;
                 }
 
-                Console.WriteLine("\n¿Desea continuar? (S/N))");
-                continuar = Console.ReadLine();
-                Console.WriteLine(" ");
+                if (running)
+                {
+
+                    Console.WriteLine("\n¿Desea continuar? (S/N))");
+                    continuar = Console.ReadLine();
+                    Console.WriteLine(" ");
+                }
 
 
-            } while (continuar == "s" || continuar == "S");
+            } while ((continuar == "s" || continuar == "S") && running);
 
         }
 
@@ -400,6 +407,7 @@ namespace Tienda
                     }
                 }
             }
+            Console.WriteLine(" ");
         }
 
         //función para la quinta opción del menú
@@ -468,7 +476,8 @@ namespace Tienda
         //función para la novena opción del menú
         public static void salir()
         {
-            Console.WriteLine("SALIR");
+            Console.WriteLine("\nMuchas gracias por usar nuestro servicio");
+            return;
         }
     }
 }
