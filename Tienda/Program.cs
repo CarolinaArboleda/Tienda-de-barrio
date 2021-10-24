@@ -354,6 +354,8 @@ namespace Tienda
 
                     id_cliente = new Random().Next(1000, 2000);
                     Console.WriteLine("\nId cliente: " + id_cliente);
+                    Console.WriteLine("\nNombre del cliente: ");
+                    nombre_cliente = Console.ReadLine();
                     Console.WriteLine("\ntotal pagado por el cliente: ");
                     pago = double.Parse(Console.ReadLine());
                     devuelta = pago - totalapagar;
@@ -407,6 +409,7 @@ namespace Tienda
         {
             string codigo_id;
             int nuevo_valor;
+            bool once = true;
 
             Console.WriteLine("Ingrese el id del cliente");
              codigo_id = Console.ReadLine();
@@ -415,11 +418,12 @@ namespace Tienda
 {
                 for (byte j = 0; j < 3; j++)
       {
-                    if (m_entrada[i, 0] == codigo_id)
+                    if (m_entrada[i, 0] == codigo_id && once)
                     {
                         Console.WriteLine("Ingrese el nuevo valor del cliente");
                         nuevo_valor = int.Parse(Console.ReadLine());
                         m_entrada[i, 2] = nuevo_valor.ToString();
+                        once = false;
                     }
                 }
             }
