@@ -464,14 +464,10 @@ namespace Tienda
         //función para la séptima opción del menú
         //imprime el total de los saldos adeudados por clientes
         public static void calcular_cartera_clientes()
-        
-
-          
-        { 
-
-           
-
-
+                
+        {
+            Console.WriteLine("\ntotal de saldos adeudados: " + deuda);
+       
         }
 
         //función para la octava opción del menú
