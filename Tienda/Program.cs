@@ -33,7 +33,7 @@ namespace Tienda
             string[,] m_clientes = new string[50, 3];
             m_clientes[0, 0] = "id"; m_clientes[1, 0] = "Nombre del cliente"; m_clientes[2, 1] = "cantidad que debe";
 
-            string[,] m_pedido = new string[9, 2]; //almacena el pedido del cliente
+            string[,] m_pedido = new string[9, 2]; //almacena el pedido del cliente // Autora: Carolina Arboleda
 
             bool running = true; //evalúa que el programa se esté ejecutando
 
@@ -94,6 +94,7 @@ namespace Tienda
         }
 
         //función que llama al menú con todas sus opciones
+        // Autor: Juan Pablo Arango
         public static void menu()
         {
             Console.WriteLine("----------Tienda Doña Esperanza---------- \n" +
@@ -110,6 +111,7 @@ namespace Tienda
 
         //función para la primera opción del menú
         //busca producto por su nombre y muestra el precio
+        // Autora: Carolina Arboleda
         public static void buscar_producto(string[,] m_entrada)
         {
             string producto;
@@ -132,6 +134,7 @@ namespace Tienda
 
         //función para la segunda opción del menú
         //calcula la suma de los productos que el cliente está comprando
+        //Autor: Juan Pablo Arango
         public static void suma_rapida_productos(string[,] m_entrada)
         {
             int cantv, cantc, canth, cantf, cantz, cantq, cantp, cantb, canta;
@@ -328,6 +331,7 @@ namespace Tienda
 
         //función para la tercera opción del menú
         //totaliza y calcula la devuelta de la suma rápida de productos
+        // Autora: Carolina Arboleda
         public static void pagar_cuenta(string[,] m_entrada)
         {
             string fiar;
@@ -394,6 +398,7 @@ namespace Tienda
 
         //función para la cuarta opción del menú
         //busca cliente por id e imprime saldo actual
+        // Autora: Carolina Arboleda
         public static void consultar_cuenta(string[,] m_entrada)
         {
             string id_consultar;
@@ -417,6 +422,7 @@ namespace Tienda
 
         //función para la quinta opción del menú
         //actualiza el saldo de un cliente
+        //Autor: Juan Pablo Arango
         public static void actualizar_cuenta(string[,] m_entrada)
         
         {
@@ -447,6 +453,7 @@ namespace Tienda
 
         //función para la sexta opción del menú
         //imprime los totales de las compras
+        // Autora: Carolina Arboleda
         public static void calcular_informe_ventas(string[,] m_entrada)
         {
 
@@ -463,6 +470,7 @@ namespace Tienda
 
         //función para la séptima opción del menú
         //imprime el total de los saldos adeudados por clientes
+        //Autor: Juan Pablo Arango
         public static void calcular_cartera_clientes()
                 
         {
@@ -480,6 +488,7 @@ namespace Tienda
         }
 
         //función para la novena opción del menú
+        // Autora: Carolina Arboleda
         public static void salir()
         {
             Console.WriteLine("\nMuchas gracias! Vuelva pronto :) ");
