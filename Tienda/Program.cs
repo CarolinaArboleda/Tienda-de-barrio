@@ -30,6 +30,8 @@ namespace Tienda
             string[,] m_clientes = new string[50, 3];
             m_clientes[0, 0] = "id"; m_clientes[1, 0] = "Nombre del cliente"; m_clientes[2, 1] = "cantidad que debe";
 
+            string[,] m_pedido = new string[9, 2]; //almacena el pedido del cliente
+
             do
             {
                 menu();
@@ -44,7 +46,7 @@ namespace Tienda
                         buscar_producto(m_productos);
                         break;
                     case "2":
-                        suma_rapida_productos();
+                        suma_rapida_productos(m_pedido);
                         break;
                     case "3":
                         pagar_cuenta(m_clientes);
@@ -56,7 +58,7 @@ namespace Tienda
                         actualizar_cuenta(m_clientes);
                         break;
                     case "6":
-                        calcular_informe_ventas();
+                        calcular_informe_ventas(m_pedido);
                         break;
                     case "7":
                         calcular_cartera_clientes();
@@ -120,29 +122,190 @@ namespace Tienda
 
         //función para la segunda opción del menú
         //calcula la suma de los productos que el cliente está comprando
-        public static void suma_rapida_productos()
+        public static void suma_rapida_productos(string[,] m_entrada)
         {
             int cantv, cantc, canth, cantf, cantz, cantq, cantp, cantb, canta;
             const float preciov = 5000f, precioc = 10000f, precioh = 4000f, preciof = 6500f, precioz = 2500f, precioq = 5500f, preciop = 4000f, preciob = 3500f, precioa = 2500f;
 
             Console.Write("Ingrese la cantidad que desea de vegetales: ");
             cantv = Int32.Parse(Console.ReadLine());
+
+            if (cantv > 0)
+            {
+                bool once = true;
+
+                for (byte i = 0; i < 9; i++)
+                {
+                    for (byte j = 0; j < 2; j++)
+                    {
+                        if (m_entrada[i, 0] == null && once)
+                        {
+                            m_entrada[i, 0] = "Vegetales"; m_entrada[i, 1] = "x" + cantv.ToString();
+                            once = false;
+                        }
+                    }
+                }
+            }
+
             Console.Write("Ingrese la cantidad que desea de carne: ");
             cantc = Int32.Parse(Console.ReadLine());
+
+            if (cantc > 0)
+            {
+                bool once = true;
+
+                for (byte i = 0; i < 9; i++)
+                {
+                    for (byte j = 0; j < 2; j++)
+                    {
+                        if (m_entrada[i, 0] == null && once)
+                        {
+                            m_entrada[i, 0] = "Carne"; m_entrada[i, 1] = "x" + cantc.ToString();
+                            once = false;
+                        }
+                    }
+                }
+            }
+
             Console.Write("Ingrese la cantidad que desea de huevos x12: ");
             canth = Int32.Parse(Console.ReadLine());
+
+            if (canth > 0)
+            {
+                bool once = true;
+
+                for (byte i = 0; i < 9; i++)
+                {
+                    for (byte j = 0; j < 2; j++)
+                    {
+                        if (m_entrada[i, 0] == null && once)
+                        {
+                            m_entrada[i, 0] = "Huevos x12"; m_entrada[i, 1] = "x" + canth.ToString();
+                            once = false;
+                        }
+                    }
+                }
+            }
+
             Console.Write("Ingrese la cantidad que desea de fruta: ");
             cantf = Int32.Parse(Console.ReadLine());
+
+            if (cantf > 0)
+            {
+                bool once = true;
+
+                for (byte i = 0; i < 9; i++)
+                {
+                    for (byte j = 0; j < 2; j++)
+                    {
+                        if (m_entrada[i, 0] == null && once)
+                        {
+                            m_entrada[i, 0] = "Fruta"; m_entrada[i, 1] = "x" + cantf.ToString();
+                            once = false;
+                        }
+                    }
+                }
+            }
+
             Console.Write("Ingrese la cantidad que desea de gaseosa: ");
             cantz = Int32.Parse(Console.ReadLine());
+
+            if (cantz > 0)
+            {
+                bool once = true;
+
+                for (byte i = 0; i < 9; i++)
+                {
+                    for (byte j = 0; j < 2; j++)
+                    {
+                        if (m_entrada[i, 0] == null && once)
+                        {
+                            m_entrada[i, 0] = "Gaseosa"; m_entrada[i, 1] = "x" + cantz.ToString();
+                            once = false;
+                        }
+                    }
+                }
+            }
+
             Console.Write("Ingrese la cantidad que desea de queso: ");
             cantq = Int32.Parse(Console.ReadLine());
+
+            if (cantq > 0)
+            {
+                bool once = true;
+
+                for (byte i = 0; i < 9; i++)
+                {
+                    for (byte j = 0; j < 2; j++)
+                    {
+                        if (m_entrada[i, 0] == null && once)
+                        {
+                            m_entrada[i, 0] = "Queso"; m_entrada[i, 1] = "x" + cantq.ToString();
+                            once = false;
+                        }
+                    }
+                }
+            }
+
             Console.Write("Ingrese la cantidad que desea de pollo: ");
             cantp = Int32.Parse(Console.ReadLine());
+
+            if (cantp > 0)
+            {
+                bool once = true;
+
+                for (byte i = 0; i < 9; i++)
+                {
+                    for (byte j = 0; j < 2; j++)
+                    {
+                        if (m_entrada[i, 0] == null && once)
+                        {
+                            m_entrada[i, 0] = "Pollo"; m_entrada[i, 1] = "x" + cantp.ToString();
+                            once = false;
+                        }
+                    }
+                }
+            }
+
             Console.Write("Ingrese la cantidad que desea de cerveza: ");
             cantb = Int32.Parse(Console.ReadLine());
+
+            if (cantb > 0)
+            {
+                bool once = true;
+
+                for (byte i = 0; i < 9; i++)
+                {
+                    for (byte j = 0; j < 2; j++)
+                    {
+                        if (m_entrada[i, 0] == null && once)
+                        {
+                            m_entrada[i, 0] = "Cerveza"; m_entrada[i, 1] = "x" + cantb.ToString();
+                            once = false;
+                        }
+                    }
+                }
+            }
+
             Console.Write("Ingrese la cantidad que desea de leche: ");
             canta = Int32.Parse(Console.ReadLine());
+
+            if (canta > 0)
+            {
+                bool once = true;
+
+                for (byte i = 0; i < 9; i++)
+                {
+                    for (byte j = 0; j < 2; j++)
+                    {
+                        if (m_entrada[i, 0] == null && once)
+                        {
+                            m_entrada[i, 0] = "Leche"; m_entrada[i, 1] = "x" + canta.ToString();
+                            once = false;
+                        }
+                    }
+                }
+            }
 
 
 
@@ -267,7 +430,7 @@ namespace Tienda
 
         //función para la sexta opción del menú
         //imprime los totales de las compras
-        public static void calcular_informe_ventas()
+        public static void calcular_informe_ventas(string[,] m_entrada)
         {
             int compras_hechas;
             int informe_ventas = 0;
