@@ -8,8 +8,8 @@ namespace Tienda
 {
     class Program
     {
-        public static int deuda;
-        public static int deuda_ac;
+        public static double deuda;
+        public static double deuda_ac;
         public static double totalapagar, devuelta, pago;
         public static int id_cliente;
         public static string nombre_cliente;
@@ -339,6 +339,8 @@ namespace Tienda
             switch (fiar)
             {
                 case "si":
+                    deuda = totalapagar;
+                    deuda = deuda + deuda_ac;
                     id_cliente = new Random().Next(1000, 2000);
                     Console.WriteLine("\nId cliente: " + id_cliente);
                     Console.WriteLine("\nNombre del cliente: ");
