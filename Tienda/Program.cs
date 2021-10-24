@@ -96,7 +96,7 @@ namespace Tienda
         //función que llama al menú con todas sus opciones
         public static void menu()
         {
-            Console.WriteLine("Tienda Doña Esperanza \n" +
+            Console.WriteLine("----------Tienda Doña Esperanza---------- \n" +
                 "\n1.- Buscar Producto" +
                 "\n2.- Suma rapida de productos" +
                 "\n3.- Pagar cuenta" +
@@ -339,7 +339,7 @@ namespace Tienda
             switch (fiar)
             {
                 case "si":
-                    deuda = totalapagar;
+                    deuda_ac = totalapagar;
                     deuda = deuda + deuda_ac;
                     id_cliente = new Random().Next(1000, 2000);
                     Console.WriteLine("\nId cliente: " + id_cliente);
@@ -482,7 +482,7 @@ namespace Tienda
         //función para la novena opción del menú
         public static void salir()
         {
-            Console.WriteLine("\nMuchas gracias por usar nuestro servicio");
+            Console.WriteLine("\nMuchas gracias! Vuelva pronto :) ");
             return;
         }
     }
