@@ -8,9 +8,12 @@ namespace Tienda
 {
     class Program
     {
+        public static int deuda;
+        public static int deuda_ac;
         public static double totalapagar, devuelta, pago;
         public static int id_cliente;
         public static string nombre_cliente;
+
 
         static void Main(string[] args)
         {
@@ -459,9 +462,14 @@ namespace Tienda
         //función para la séptima opción del menú
         //imprime el total de los saldos adeudados por clientes
         public static void calcular_cartera_clientes()
-        {
+        
 
-            Console.WriteLine("Cartera clientes: 0");
+          
+        { 
+
+           
+
+
         }
 
         //función para la octava opción del menú
