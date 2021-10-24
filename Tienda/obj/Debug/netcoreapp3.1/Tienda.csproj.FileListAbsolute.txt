@@ -12,3 +12,17 @@ C:\Users\hp\source\repos\Tienda\Tienda\obj\Debug\netcoreapp3.1\Tienda.csproj.Cor
 C:\Users\hp\source\repos\Tienda\Tienda\obj\Debug\netcoreapp3.1\Tienda.dll
 C:\Users\hp\source\repos\Tienda\Tienda\obj\Debug\netcoreapp3.1\Tienda.pdb
 C:\Users\hp\source\repos\Tienda\Tienda\obj\Debug\netcoreapp3.1\Tienda.genruntimeconfig.cache
+C:\Users\nanis\Documents\GitHub\Tienda-de-barrio\Tienda\bin\Debug\netcoreapp3.1\Tienda.exe
+C:\Users\nanis\Documents\GitHub\Tienda-de-barrio\Tienda\bin\Debug\netcoreapp3.1\Tienda.deps.json
+C:\Users\nanis\Documents\GitHub\Tienda-de-barrio\Tienda\bin\Debug\netcoreapp3.1\Tienda.runtimeconfig.json
+C:\Users\nanis\Documents\GitHub\Tienda-de-barrio\Tienda\bin\Debug\netcoreapp3.1\Tienda.runtimeconfig.dev.json
+C:\Users\nanis\Documents\GitHub\Tienda-de-barrio\Tienda\bin\Debug\netcoreapp3.1\Tienda.dll
+C:\Users\nanis\Documents\GitHub\Tienda-de-barrio\Tienda\bin\Debug\netcoreapp3.1\Tienda.pdb
+C:\Users\nanis\Documents\GitHub\Tienda-de-barrio\Tienda\obj\Debug\netcoreapp3.1\Tienda.csproj.AssemblyReference.cache
+C:\Users\nanis\Documents\GitHub\Tienda-de-barrio\Tienda\obj\Debug\netcoreapp3.1\Tienda.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nanis\Documents\GitHub\Tienda-de-barrio\Tienda\obj\Debug\netcoreapp3.1\Tienda.AssemblyInfoInputs.cache
+C:\Users\nanis\Documents\GitHub\Tienda-de-barrio\Tienda\obj\Debug\netcoreapp3.1\Tienda.AssemblyInfo.cs
+C:\Users\nanis\Documents\GitHub\Tienda-de-barrio\Tienda\obj\Debug\netcoreapp3.1\Tienda.csproj.CoreCompileInputs.cache
+C:\Users\nanis\Documents\GitHub\Tienda-de-barrio\Tienda\obj\Debug\netcoreapp3.1\Tienda.dll
+C:\Users\nanis\Documents\GitHub\Tienda-de-barrio\Tienda\obj\Debug\netcoreapp3.1\Tienda.pdb
+C:\Users\nanis\Documents\GitHub\Tienda-de-barrio\Tienda\obj\Debug\netcoreapp3.1\Tienda.genruntimeconfig.cache

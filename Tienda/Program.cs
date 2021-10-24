@@ -434,8 +434,14 @@ namespace Tienda
         {
             int compras_hechas;
             int informe_ventas = 0;
-             
-            
+
+            for (byte i = 0; i < 9; i++)
+            {
+                for (byte j = 0; j < 2; j++)
+                {
+                    Console.WriteLine(m_entrada[i, j]);
+                }
+            }
 
 
             Console.WriteLine(totalapagar);
